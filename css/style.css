@@ -8,6 +8,9 @@
 
 body {
     background-color: #c2c5fabd;
+    background-image: url("https://zefirka.club/uploads/posts/2022-12/thumbs/1671824386_18-zefirka-club-p-fon-dlya-mobilnogo-prilozheniya-19.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
@@ -20,7 +23,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 450px;
+    max-width: 500px;
   }
 }
 
