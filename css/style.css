@@ -41,12 +41,13 @@ form {
   align-items: start;
   font-family: 'Montserrat', sans-serif;
   margin: 20px 20px;
-  border: 3px solid #4e74ffb0;
+  border: 3px solid #8ba1f0b0;
   border-radius: 8px;
   padding: 10px 10px;
   padding-bottom: 30px;
   align-items: center;
   background-color: azure;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .form-input {
@@ -69,6 +70,7 @@ form {
     font-size: 16px;
     line-height: 1.5;
     background-color: #FFFFFF
+    
 }
 
 textarea {
@@ -102,17 +104,18 @@ button:focus {
   align-items: start;
   font-family: 'Montserrat', sans-serif;
   margin: 20px 20px;
-  border: 3px solid #4e74ffb0;
+  border: 3px solid #8ba1f0b0;
   border-radius: 8px;
   padding: 10px 10px;
   padding-bottom: 30px;
   align-items: center;
   min-height: 320px;
   background-color: azure;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .tasks-list li {
-    border: 1px solid #551010;
+    border: 2px solid #551010;
     padding: 10px;
     border-radius: 8px;
     background-color: #FFFFFF
