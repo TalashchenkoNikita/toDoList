@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
     background-image: url("https://zefirka.club/uploads/posts/2022-12/thumbs/1671824386_18-zefirka-club-p-fon-dlya-mobilnogo-prilozheniya-19.jpg");
     background-size: cover;        
