@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-    <script type="module" src="./js/task-1.js"></script>
-    <script type="module" src="./js/task-2.js"></script>
-    <script type="module" src="./js/task-3.js"></script>   
+    <div class="container">
+      <form class="add-task-form">
+        <h2>Add task:</h2>
+        <input class="add-task-input" name="add-task-input" autofocus />
+        <button type="submit" class="submit-btn-add">Add task</button>
+        <button type="submit" class="submit-btn-clear">Clear All</button>
+      </form>
+      <ul class="tasks-list">
+        <h2>Tasks:</h2>
+      </ul>
+    </div>
+    <script type="module" src="./js/script.js"></script>  
 </body>
 </html>
