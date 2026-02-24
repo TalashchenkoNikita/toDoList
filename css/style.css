@@ -73,9 +73,10 @@ form {
     
 }
 
-textarea {
-  resize: none;
+.add-task-input:focus {
+  border-color: #6c8cff;
 }
+
 
 button {
     align-self: center;
