@@ -34,6 +34,10 @@ body {
   }
 }
 
+h2 {
+  color: #320707d6;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -105,6 +109,7 @@ button:focus {
   align-items: start;
   font-family: 'Montserrat', sans-serif;
   margin: 20px 20px;
+  margin-bottom: 50px;
   border: 3px solid #8ba1f0b0;
   border-radius: 8px;
   padding: 10px 10px;
