@@ -1,23 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
     <link rel="stylesheet" href="./css/style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
       <form class="add-task-form">
         <h2>Add task:</h2>
+        <a class="svg-btn" href="history.html">
+          <svg class="history-icon" width="20" height="20">
+            <use href="./img/open-book.svg"></use>
+          </svg>
+        </a>
         <input class="add-task-input" name="add-task-input" autofocus />
-        <button type="submit" class="submit-btn-add">Add task</button>
-        <button type="submit" class="submit-btn-clear">Clear All</button>
+        <button type="submit" class="tasks-btn submit-btn-add">Add task</button>
+        <button type="submit" class="tasks-btn submit-btn-clear">Clear All</button>
       </form>
-      <ul class="tasks-list">
+      <div class="tasks-list-div">
         <h2>Tasks:</h2>
-      </ul>
+        <ul class="tasks-list">
+        </ul>
+      </div>
     </div>
-    <script type="module" src="./js/script.js"></script>  
-</body>
+    <script type="module" src="./js/script.js"></script>
+  </body>
 </html>
