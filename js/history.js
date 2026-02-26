@@ -1,4 +1,4 @@
-const historyList = document.querySelector('.tasks-list');
+const historyList = document.querySelector('[data-type="history"]');
 const historyListKey = 'history-list-key';
 const deleteBtn = document.querySelector('.delete-btn');
 let historyStorageData = loadFromLS(historyListKey, []);

@@ -1,4 +1,4 @@
-const taskList = document.querySelector('.tasks-list');
+const taskList = document.querySelector('[data-type="tasks"]');
 const addTaskForm = document.querySelector('.add-task-form');
 const taskListKey = 'task-list-key';
 const historyListKey = 'history-list-key';
@@ -53,9 +53,10 @@ addTaskForm.addEventListener('submit', e => {
     return;
   }
   if (text) {
-    storageData.push({ id: Date.now(), text });
+    const taskToAdd = { id: Date.now(), text }
+    storageData.push(taskToAdd);
     saveToLS(taskListKey, storageData);
-    taskList.insertAdjacentHTML('beforeend', addItem({ id: Date.now(), text }));
+    taskList.insertAdjacentHTML('beforeend', addItem(taskToAdd));
     addTaskForm.reset();
   }
 });
