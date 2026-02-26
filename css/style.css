@@ -88,11 +88,16 @@ form {
   position: absolute;
   top: 30px;
   right: 20px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
+}
+
+.svg-btn:hover,
+.svg-btn:focus {
+    border: 2px solid #6c8cff;
 }
 
 .delete-btn {
@@ -124,7 +129,7 @@ form {
     background-color: #FFFFFF
     
 }
-
+.add-task-input:hover,
 .add-task-input:focus {
   border-color: #6c8cff;
 }
@@ -183,4 +188,10 @@ form {
     border-radius: 8px;
     background-color: #FFFFFF;
     text-align: center;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tasks-list li:hover,
+.tasks-list li:focus {
+    border-color: #6c8cff;
 }
