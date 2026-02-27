@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/light.css">
+    <link rel="stylesheet" href="./css/dark.css" id="dark-theme" disabled>
     <link rel="icon" type="image/svg+xml" href="./img/favicon.png">
   </head>
   <body>
     <div class="container">
       <form class="add-task-form">
+        <button type="button" class="theme-toggle svg-btn left-btn">
+          <img src="./img/moon-sun.svg" alt="Theme">
+        </button>
         <h2 translate="no">Add task:</h2>
         <a class="svg-btn" href="history.html">
           <img src="./img/open-book.svg" alt="History">

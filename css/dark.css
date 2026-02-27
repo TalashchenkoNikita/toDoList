@@ -12,7 +12,10 @@ html, body {
 }
 
 body {
-    background-image: url("../img/bg-image.png");
+    background-image: linear-gradient( 
+    rgba(46, 47, 66, 0.07), 
+    rgba(46, 47, 66, 0.07)),
+    url("../img/bg-image.png");
     background-size: cover;        
     background-position: center;   
     background-repeat: no-repeat;  
@@ -41,7 +44,12 @@ body {
 }
 
 h2 {
-  color: #320707d6;
+  color: #ffffff;
+  text-shadow:
+    -1px  0px 0 #32070721,
+     0px -1px 0 #32070721,
+    -1px  0px 0 #32070721,
+     0px  1px 0 #32070721;
 }
 
 form {
@@ -52,42 +60,26 @@ form {
   align-items: start;
   font-family: 'Montserrat', sans-serif;
   margin: 20px 20px;
-  border: 3px solid #8ba1f0b0;
-  border-radius: 8px;
+  border: 2px solid #8ba1f0b0;
+  border-radius: 10px;
   padding: 10px 10px;
   padding-bottom: 30px;
   align-items: center;
-  background-color: azure;
+  background-color: rgba(240, 255, 255, 0.674);
+  background-image: linear-gradient( 
+    rgba(46, 47, 66, 0.2), 
+    rgba(46, 47, 66, 0.2));
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.svg-btn{
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid #320707d6;
-  background: azure;
-  cursor: pointer;
-  position: absolute;
-  top: 30px;
-  right: 20px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
 
 .svg-btn{
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid #320707d6;
-  background: azure;
+  border: 1px solid #320707a1;
+  background: #ffffffda;
   cursor: pointer;
-  position: absolute;
-  top: 30px;
-  right: 20px;
   transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
@@ -95,12 +87,18 @@ form {
   padding: 0;
 }
 
+.right-btn {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
 .svg-btn:hover,
 .svg-btn:focus {
     border: 2px solid #6c8cff;
 }
 
-.delete-btn {
+.left-btn {
   position: absolute;
   top: 30px;
   left: 20px;
@@ -116,17 +114,16 @@ form {
 
 .add-task-input {
     width: 100%;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
+    border: 1px solid #320707a1;;
+    border-radius: 8px;
     padding: 8px 16px;
-    background: transparent;
     outline: none;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color:  #2e2f42;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #FFFFFF
+    background-color: #ffffffda;
     
 }
 .add-task-input:hover,
@@ -138,14 +135,14 @@ form {
 .tasks-btn {
     align-self: center;
     margin-top: 8px;
-    border-radius: 8px;
+    border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     font-weight: 500;
     padding: 8px 16px;
     border: none;
-    background-color: #4E75FF;
+    background-color: #3863feb9;
     color: #FFFFFF;
 }
 
@@ -163,13 +160,16 @@ form {
   font-family: 'Montserrat', sans-serif;
   margin: 20px 20px;
   margin-bottom: 50px;
-  border: 3px solid #8ba1f0b0;
-  border-radius: 8px;
+  border: 2px solid #8ba1f0b0;
+  border-radius: 10px;
   padding: 10px 10px;
   padding-bottom: 30px;
   align-items: center;
   min-height: 320px;
-  background-color: azure;
+  background-color: rgba(240, 255, 255, 0.674);
+  background-image: linear-gradient( 
+    rgba(46, 47, 66, 0.2), 
+    rgba(46, 47, 66, 0.2));
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
@@ -183,12 +183,13 @@ form {
 }
 
 .tasks-list li {
-    border: 2px solid #551010;
+    border: 1px solid #320707a1;;
     padding: 10px;
-    border-radius: 8px;
-    background-color: #FFFFFF;
+    border-radius: 10px;
+    background-color: #ffffffda;
     text-align: center;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.05);
 }
 
 .tasks-list li:hover,

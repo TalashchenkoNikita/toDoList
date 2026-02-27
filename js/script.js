@@ -2,7 +2,10 @@ const taskList = document.querySelector('[data-type="tasks"]');
 const addTaskForm = document.querySelector('.add-task-form');
 const taskListKey = 'task-list-key';
 const historyListKey = 'history-list-key';
+const themeKey = 'theme';
 let storageData = loadFromLS(taskListKey, []);
+const darkTheme = document.getElementById("dark-theme");
+const toggleBtn = document.querySelector(".theme-toggle");
 
 function saveToLS(key, value) {
   const json = JSON.stringify(value);
@@ -37,6 +40,12 @@ function addItem(item) {
 
 function addItems(items) {
   return items.map(addItem).join('');
+}
+
+const savedTheme = localStorage.getItem(themeKey);
+
+if (savedTheme === "dark") {
+  darkTheme.disabled = false;
 }
 
 taskList.insertAdjacentHTML('beforeend', addItems(storageData));
@@ -74,4 +83,16 @@ taskList.addEventListener('dblclick', e => {
       li.remove();
     }
   });
+});
+
+toggleBtn.addEventListener("click", () => {
+  const isDarkActive = !darkTheme.disabled;
+
+  if (isDarkActive) {
+    darkTheme.disabled = true;
+    localStorage.setItem("theme", "light");
+  } else {
+    darkTheme.disabled = false;
+    localStorage.setItem("theme", "dark");
+  }
 });

@@ -1,6 +1,8 @@
 const historyList = document.querySelector('[data-type="history"]');
 const historyListKey = 'history-list-key';
+const themeKey = 'theme';
 const deleteBtn = document.querySelector('.delete-btn');
+const darkTheme = document.getElementById("dark-theme");
 let historyStorageData = loadFromLS(historyListKey, []);
 
 function saveToLS(key, value)  {
@@ -26,6 +28,12 @@ function addItem(item) {
 
 function addItems(items) {
   return items.reverse().map(addItem).join('');
+}
+
+const savedTheme = localStorage.getItem(themeKey);
+
+if (savedTheme === "dark") {
+  darkTheme.disabled = false;
 }
 
 historyList.insertAdjacentHTML('afterbegin', addItems(historyStorageData));
