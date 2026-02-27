@@ -68,23 +68,6 @@ form {
   border: 1px solid #320707d6;
   background: azure;
   cursor: pointer;
-  position: absolute;
-  top: 30px;
-  right: 20px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-
-.svg-btn{
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid #320707d6;
-  background: azure;
-  cursor: pointer;
   transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
