@@ -35,7 +35,7 @@ function getTimeDiff(date1, date2) {
 }
 
 function addItem(item) {
-  return `<li data-id="${item.id} data-time="${item.time}">
+  return `<li data-id=${item.id} data-time=${item.time}>
       ${item.text}<span class="hours"> (${getTimeDiff(Date.now(),item.time)})</span>
     </li>`;
 }
@@ -62,6 +62,7 @@ deleteBtn.addEventListener("click", (e) => {
 historyList.addEventListener("dblclick", (e) => {
   const id = e.target.dataset.id;
   const index = historyStorageData.findIndex(element => element.id === Number(id));
+  console.log(index);
   if (index !== -1) {
     historyStorageData.splice(index, 1);
     saveToLS(historyListKey, historyStorageData);

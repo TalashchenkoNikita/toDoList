@@ -49,7 +49,7 @@ function getTimeDiff(date1, date2) {
 }
 
 function addItem(item) {
-  return `<li data-id=${item.id} data-time="${item.time}">
+  return `<li data-id=${item.id} data-time=${item.time}>
       ${item.text}<span class="hours"> (${getTimeDiff(Date.now(),item.time)})</span>
     </li>`;
 }
