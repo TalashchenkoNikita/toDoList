@@ -25,16 +25,32 @@ function loadFromLS(key, defaultValue) {
 function addToHistory(value) {
   const temp = loadFromLS(historyListKey, []);
   if (Array.isArray(value)) {
+    value.forEach(task => task.time = Date.now());
     temp.push(...value);
   } else {
+    value.time = Date.now();
     temp.push(value);
   }
   saveToLS(historyListKey, temp);
 }
 
+function getTimeDiff(date1, date2) {
+  const diffMs = Math.abs(date1 - date2);
+  const oneMinute = 1000*60;
+  const oneHour = oneMinute * 60;
+  const oneDay = oneHour * 24;
+  if(Math.floor(diffMs / oneDay) >= 1) {
+    return `${Math.floor(diffMs/oneDay)} days`
+  } else if (Math.floor(diffMs / oneHour) >= 1) {
+    return `${Math.floor(diffMs/oneHour)} hours`
+  } else {
+    return `${Math.floor(diffMs/oneMinute)} minutes`
+  }
+}
+
 function addItem(item) {
-  return `<li data-id="${item.id}">
-      ${item.text}
+  return `<li data-id=${item.id} data-time="${item.time}">
+      ${item.text}<span class="hours"> (${getTimeDiff(Date.now(),item.time)})</span>
     </li>`;
 }
 
@@ -62,7 +78,8 @@ addTaskForm.addEventListener('submit', e => {
     return;
   }
   if (text) {
-    const taskToAdd = { id: Date.now(), text }
+    const dateOfCreate = Date.now();
+    const taskToAdd = { id: dateOfCreate, time: dateOfCreate, text }
     storageData.push(taskToAdd);
     saveToLS(taskListKey, storageData);
     taskList.insertAdjacentHTML('beforeend', addItem(taskToAdd));

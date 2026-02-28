@@ -193,6 +193,8 @@ form:hover,
 }
 
 .tasks-list li {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #320707a1;
     padding: 10px;
     border-radius: 10px;
@@ -205,4 +207,8 @@ form:hover,
 .tasks-list li:hover,
 .tasks-list li:focus {
     border-color: #6c8cff;
+}
+
+.hours {
+  font-size: 8px;
 }
